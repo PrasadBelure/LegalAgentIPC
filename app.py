@@ -150,7 +150,7 @@ def main():
 
         candidate_df = route_query(ipc_df, crime_type)
 
-        with st.spinner("📖 Retrieving relevant IPC/IT Act sections..."):
+        with st.spinner("📖 Retrieving relevant IPC Act sections..."):
             initial_matches = retrieve_sections(summary, candidate_df, sbert_model)
 
         with st.spinner("🎯 Reranking sections based on LLM feedback..."):
